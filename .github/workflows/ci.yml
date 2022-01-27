@@ -1,7 +1,7 @@
 name: CI
 
 on:
-  pull_request:
+  push:
     branches:
       - master
       - develop
@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 10.x
       - name: Install node packages
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: Check eslint
         run: npm run check:lint
 
@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: 10.x
       - name: Install node packages
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: Check prettier
         run: npm run check:prettier
 
@@ -45,6 +45,6 @@ jobs:
         with:
           node-version: 10.x
       - name: Install node packages
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: Check prettier
         run: npm run build
