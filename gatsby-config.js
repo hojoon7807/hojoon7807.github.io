@@ -62,6 +62,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: "G-SR0MSBKFDV",
+        head: false,
+        anonymize: true,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         commonmark: true,
