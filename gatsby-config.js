@@ -77,6 +77,7 @@ module.exports = {
         pedantic: true,
         gfm: true,
         plugins: [
+          "gatsby-remark-sub-sup",
           {
             resolve: `gatsby-remark-images`,
             options: {
