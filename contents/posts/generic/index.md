@@ -85,6 +85,7 @@ List<Integer> list = new ArrayList<>();
 `E, List<E>, List<String>`과 같은 타입들을 비 구체화 타입이라고 하고 그 반대로 구체화 타입이 있으며, ```List<?>, Map<?,?>와 같은 언바운드 와일드 카드 타입 등이 있다.
 
 > 비 구체화 타입(non-reifiable type): 타입 소거자에 의해 컴파일 타임에 타입 정보가 사라지는 것(런타임에 구체화 하지 않는 것)
+>
 > 구체화 타입(reifiable type): 자신의 타입 정보를 런타임 시에 알고 지키게 하는 것(런타임에 구체화 하는 것)
 
 ### 언바운드 와일드카드 타입(Unbounded wildcard type)

@@ -2,7 +2,7 @@
 title: "해싱이란?"
 description: "해싱에 대해서"
 date: 2022-02-04
-update: 2022-02-24
+update: 2022-02-04
 tags:
   - 자료구조
 ---
