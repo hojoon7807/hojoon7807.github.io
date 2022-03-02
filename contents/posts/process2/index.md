@@ -1,8 +1,8 @@
 ---
 title: "[운영체제(OS)] 2.프로세스-IPC"
 description: "IPC에 대해서"
-date: 2022-02-24
-update: 2022-02-24
+date: 2022-02-26
+update: 2022-02-26
 tags:
   - 운영체제
 ---
