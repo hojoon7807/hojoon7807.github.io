@@ -19,6 +19,7 @@ const SEO = ({ title, description, url }) => {
         name="naver-site-verification"
         content="fe71bd8be94821af50e16778cff6bfe056a8b1d1"
       />
+      <link rel="canonical" href="https://hojoon7807.github.io/"></link>
     </Helmet>
   )
 }
