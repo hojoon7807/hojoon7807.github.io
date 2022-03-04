@@ -15,6 +15,10 @@ const SEO = ({ title, description, url }) => {
         name="google-site-verification"
         content="CI8QQeFyFDFWoMOnDfLbOftCGVbKSKXBC4qymqp35F8"
       />
+      <meta
+        name="naver-site-verification"
+        content="fe71bd8be94821af50e16778cff6bfe056a8b1d1"
+      />
     </Helmet>
   )
 }
