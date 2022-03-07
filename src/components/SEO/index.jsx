@@ -20,6 +20,11 @@ const SEO = ({ title, description, url }) => {
         content="fe71bd8be94821af50e16778cff6bfe056a8b1d1"
       />
       <link rel="canonical" href="https://hojoon7807.github.io/"></link>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4290259255238275"
+        crossOrigin="anonymous"
+      ></script>
     </Helmet>
   )
 }
