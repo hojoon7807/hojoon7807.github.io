@@ -11,7 +11,20 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-catch-links`,
-    `gatsby-plugin-robots-txt`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        // ${domain-url} 부분에 자신의 도메인 url을 넣는다
+        host: "https://hojoon7807.github.io",
+        sitemap: "https://hojoon7807.github.io/sitemap.xml",
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-react-redux`,
       options: {
@@ -129,7 +142,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-resolve-src`,
-    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -161,7 +174,8 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: { fields: [frontmatter___date], order: DESC }
+                  filter: { frontmatter: { draft: { eq: false } } },
                 ) {
                   edges {
                     node {
@@ -177,9 +191,7 @@ module.exports = {
                 }
               }
             `,
-            output: `/rss.xml`,
-            title: `RSS Feed of ${title}`,
-            match: "^/blog/",
+            output: "/rss.xml",
           },
         ],
       },
