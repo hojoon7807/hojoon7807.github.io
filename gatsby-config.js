@@ -174,8 +174,7 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(
-                  sort: { fields: [frontmatter___date], order: DESC }
-                  filter: { frontmatter: { draft: { eq: false } } },
+                  sort: { order: DESC, fields: [frontmatter___date] },
                 ) {
                   edges {
                     node {
@@ -191,7 +190,9 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
+            output: `/rss.xml`,
+            title: `RSS Feed of ${title}`,
+            match: "^/blog/",
           },
         ],
       },
