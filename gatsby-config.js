@@ -7,9 +7,56 @@ module.exports = {
     title,
     description,
     author,
-    siteUrl,
+    siteUrl: `https://hojoon7807.github.io`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `{
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+          allMarkdownRemark {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+              }
+            }
+          }
+        }`,
+        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
+          let pages = []
+          allSitePage.edges.map(edge => {
+            pages.push({
+              url: site.siteMetadata.siteUrlNoSlash + edge.node.path,
+              changefreq: `daily`,
+              priority: 0.7,
+            })
+          })
+          allMarkdownRemark.edges.map(edge => {
+            pages.push({
+              url: `${site.siteMetadata.siteUrlNoSlash}/${edge.node.fields.slug}`,
+              changefreq: `daily`,
+              priority: 0.7,
+            })
+          })
+
+          return pages
+        },
+      },
+    },
     `gatsby-plugin-catch-links`,
     {
       resolve: "gatsby-plugin-robots-txt",
@@ -142,7 +189,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-resolve-src`,
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
