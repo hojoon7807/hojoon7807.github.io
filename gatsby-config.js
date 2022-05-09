@@ -40,14 +40,14 @@ module.exports = {
           let pages = []
           allSitePage.edges.map(edge => {
             pages.push({
-              url: site.siteMetadata.siteUrlNoSlash + edge.node.path,
+              url: site.siteMetadata.siteUrl + edge.node.path,
               changefreq: `daily`,
               priority: 0.7,
             })
           })
           allMarkdownRemark.edges.map(edge => {
             pages.push({
-              url: `${site.siteMetadata.siteUrlNoSlash}/${edge.node.fields.slug}`,
+              url: `${site.siteMetadata.sitUrl}/${edge.node.fields.slug}`,
               changefreq: `daily`,
               priority: 0.7,
             })
