@@ -47,7 +47,7 @@ module.exports = {
           })
           allMarkdownRemark.edges.map(edge => {
             pages.push({
-              url: `${site.siteMetadata.sitUrl}/${edge.node.fields.slug}`,
+              url: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
               changefreq: `daily`,
               priority: 0.7,
             })
