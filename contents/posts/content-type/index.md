@@ -197,7 +197,7 @@ jQuery 공식문서에는 다음과 같이 써있다.
     }
 ```
 
-![스크린샷 2022-05-10 오후 3.19.33](/Users/hojunlim/Documents/my-blog-starter/contents/posts/jvm/4.png)
+![스크린샷 2022-05-10 오후 3.19.33](4.png)
 
 테스트도 문제없이 통과한 모습을 볼 수 있다.
 
