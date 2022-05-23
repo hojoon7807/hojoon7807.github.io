@@ -7,7 +7,7 @@ module.exports = {
     title,
     description,
     author,
-    siteUrl: `https://hojoon7807.github.io`,
+    siteUrl,
   },
   plugins: [
     `gatsby-plugin-sitemap`,
