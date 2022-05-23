@@ -10,7 +10,7 @@ module.exports = {
     siteUrl,
   },
   plugins: [
-    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-catch-links`,
     {
       resolve: "gatsby-plugin-robots-txt",
